@@ -11,7 +11,8 @@ public class Audiobook extends MediaItem implements Playable {
 
     @Override
     public void play() {
-        System.out.println("\uD83D\uDCD6 Afspiller lydbog: \"Dune\" af Frank Herbert (21:14:00)");
+        System.out.println("\uD83D\uDCD6 Afspiller lydbog: " + title +
+                " af "+ author + " ("+ durationSeconds+")");
     }
 
 }
