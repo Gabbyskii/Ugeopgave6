@@ -14,15 +14,25 @@ public class MediaPlayer {
    }
 
     public void playAll(){
-        //play();
+        for (Playable pl: playlist){
+            pl.play();
+        }
     }
 
     public int getTotalDurationSeconds() {
-        return 0;
+        int total = 0;
+        for (Playable item: playlist) {
+            total += item.getDurationSeconds();
+        }
+        return total;
     }
 
     public void printPlaylist(){
-
+        for (Playable item: playlist) {
+            System.out.println("Playlist: " + item.getTitle() +
+                    " (" + item.getDurationSeconds() + " sec)");
+        }
     }
+
 
 }
