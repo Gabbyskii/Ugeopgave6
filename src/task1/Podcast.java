@@ -11,7 +11,7 @@ public class Podcast extends MediaItem implements Playable {
     @Override
     public void play() {
         System.out.println("\uD83C\uDF99 Afspiller podcast: " + title +
-                " af "+ host + " ("+ durationSeconds+")");
+                " af "+ host + " ("+ durationSeconds+ " sek)");
     }
 
 }

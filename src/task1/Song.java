@@ -12,7 +12,7 @@ public class Song extends MediaItem implements Playable {
     @Override
     public void play() {
         System.out.println("♪ Afspiller sang: "+ title +
-                " af "+ artist + " ("+ durationSeconds+")");
+                " af "+ artist + " ("+ durationSeconds+" sek)");
     }
 
 

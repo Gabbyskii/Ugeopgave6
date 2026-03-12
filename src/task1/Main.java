@@ -5,17 +5,24 @@ import java.util.ArrayList;
 public class Main {
     void main(){
 
-     ArrayList<Playable> media = new ArrayList<>();
-     media.add(new Audiobook("Little red riding hood", 2000,"greta"));
-     media.add(new Song("Raindance", 300,"greta"));
-     media.add(new Podcast("John kirikou interview",1500,"LADBible"));
+        MediaPlayer player = new MediaPlayer();
 
-     for (MediaPlayer m: media){
-         System.out.println(m);
-     }
-        .printPlaylist();
+        player.add(new Audiobook("Little red riding hood", 2000,"greta"));
+        player.add(new Song("Raindance", 300,"greta"));
+        player.add(new Podcast("John kirikou interview",1500,"LADBible"));
+
+        System.out.println("===Playlist===");
+         player.printPlaylist();
+
+        System.out.println("\n===Afspilning af playlist===");
+        player.playAll();
+
+        System.out.println("Playlist samlet varighed: "
+                + player.getTotalDurationSeconds() + " sek");
+
 
 
     }
 
 }
+

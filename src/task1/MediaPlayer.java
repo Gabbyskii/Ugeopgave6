@@ -30,7 +30,7 @@ public class MediaPlayer {
     public void printPlaylist(){
         for (Playable item: playlist) {
             System.out.println("Playlist: " + item.getTitle() +
-                    " (" + item.getDurationSeconds() + " sec)");
+                    " (" + item.getDurationSeconds() + " sek)");
         }
     }
 
