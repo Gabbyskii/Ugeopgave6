@@ -13,7 +13,6 @@ public class Rectangle implements Shape {
 
     @Override
     public double getArea() {
-        System.out.println("Rectangle!");
         return height * width;
     }
 

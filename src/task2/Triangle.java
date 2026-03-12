@@ -1,11 +1,11 @@
 package task2;
 
 public class Triangle implements Shape {
-    private double a;
-    private double b;
-    private double c;
+    private int a;
+    private int b;
+    private int c;
 
-    public Triangle(double a, double b, double c) {
+    public Triangle(int a, int b, int c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -14,8 +14,7 @@ public class Triangle implements Shape {
 
     @Override
     public double getArea() {
-        System.out.println("Triangle!");
-        return 0; //forkert: 0.5 * a * b * c;
+        return 0.5 * a * b; //forkert: 0.5 * a * b * c;
     }
 
     @Override

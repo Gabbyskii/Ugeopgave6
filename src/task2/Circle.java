@@ -12,7 +12,6 @@ public class Circle implements Shape {
 
     @Override
     public double getArea() {
-        System.out.println("Circle!");
         return PI * radius*2;
     }
 

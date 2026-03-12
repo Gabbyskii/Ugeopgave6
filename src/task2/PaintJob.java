@@ -24,29 +24,35 @@ public class PaintJob {
     }
 
     public double getTotalSurface(){
-
+        double totalSurface = 0;
+        for (Shape s: surfaces) {
+            totalSurface += s.getArea();
+        }
+        return totalSurface;
     }
-
     public double getTotalDeductions(){
-
+        double totalDeduction = 0;
+        for (Shape s: deductions) {
+            totalDeduction += s.getArea();
+        }
+        return totalDeduction;
     }
 
     public double getPaintableArea(){
-
+        double roundingNum = getTotalSurface() - getTotalDeductions();
+        return Math.round(roundingNum);
     }
 
     public void printSummary(){
-
+        System.out.println("=== Malerberegner: " + name + " ===");
+        System.out.println("Skal males i alt: " + getPaintableArea() + " m²");
     }
 
 
     @Override
     public String toString() {
-        return "PaintJob{" +
-                "name='" + name + '\'' +
-                ", surfaces=" + surfaces +
-                ", deductions=" + deductions +
-                '}';
+        return  name + " surfaces=" + surfaces +
+                ", deductions=" + deductions;
     }
 
 }
