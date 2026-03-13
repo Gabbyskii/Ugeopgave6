@@ -3,11 +3,11 @@ package task1;
 import java.util.ArrayList;
 
 public class MediaPlayer {
-    ArrayList<Playable> playlist;
+    ArrayList<Playable> playlist = new ArrayList<>();
 
-    public MediaPlayer() {
+    /*public MediaPlayer() {
         this.playlist = new ArrayList<>();
-    }
+    }*/
 
     public void add(Playable item){
        playlist.add(item);
@@ -29,7 +29,7 @@ public class MediaPlayer {
 
     public void printPlaylist(){
         for (Playable item: playlist) {
-            System.out.println("Playlist: " + item.getTitle() +
+            System.out.println("Title: "+ item.getTitle() +
                     " (" + item.getDurationSeconds() + " sek)");
         }
     }

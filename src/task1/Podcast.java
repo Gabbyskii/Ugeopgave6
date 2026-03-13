@@ -14,4 +14,5 @@ public class Podcast extends MediaItem implements Playable {
                 " af "+ host + " ("+ durationSeconds+ " sek)");
     }
 
+
 }

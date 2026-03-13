@@ -1,7 +1,7 @@
 package task1;
 
 public class Song extends MediaItem implements Playable {
-    String artist;
+     protected String artist;
 
     public Song(String title, int durationSeconds, String artist) {
         super(title, durationSeconds);
@@ -14,6 +14,8 @@ public class Song extends MediaItem implements Playable {
         System.out.println("♪ Afspiller sang: "+ title +
                 " af "+ artist + " ("+ durationSeconds+" sek)");
     }
+
+    //ville ellers skulle kalde inferface metoder her ved: return super.getDuration; fx
 
 
 
