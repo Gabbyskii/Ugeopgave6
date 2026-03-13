@@ -12,6 +12,9 @@ Podcast --> MediaItem
 Song --> MediaItem
 Audiobook --> MediaItem
 
+Playable <|.. Song
+Playable <|.. Audiobook
+Playable <|.. Podcast
 
 abstract class MediaItem {
  - String title
